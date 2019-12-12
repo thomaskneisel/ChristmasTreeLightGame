@@ -288,9 +288,9 @@ void stepScreensaver() {
         } else {
             for(int column = 0; column < columns; column++) { 
                 // This inner loop will go over each led in the current strip, one at a time
-                for(int j = 0; j < rows; j++) {
+                for(int row = 0; row < rows; row++) {
                     colorIndex +=3;
-                    leds[i][j] = ColorFromPalette(currentPalette, colorIndex, 255, currentBlending);
+                    leds[column][row] = ColorFromPalette(currentPalette, colorIndex, 255, currentBlending);
                 }
             }
         }
